@@ -20,8 +20,10 @@
     "infra",
     "libs/*",
     "pkgs/*",
+    "profiles/*",
     "providers/*",
-    "service"
+    "service",
+    "stores/*"
   ],
   "devDependencies": {
     "@libs/build": "workspace:^",
