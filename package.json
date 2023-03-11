@@ -1,6 +1,6 @@
 {
   "name": "@janus/janus.js",
-  "packageManager": "yarn@4.0.0-rc.39",
+  "packageManager": "yarn@4.0.0-rc.40",
   "scripts": {
     "build": "node build.mjs",
     "watch": "node build.mjs watch",
