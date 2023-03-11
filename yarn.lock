@@ -230,6 +230,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@libs/config@workspace:libs/config":
+  version: 0.0.0-use.local
+  resolution: "@libs/config@workspace:libs/config"
+  languageName: unknown
+  linkType: soft
+
 "@libs/router@workspace:^, @libs/router@workspace:libs/router":
   version: 0.0.0-use.local
   resolution: "@libs/router@workspace:libs/router"
@@ -272,11 +278,71 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pkgs/canary@workspace:pkgs/canary":
+  version: 0.0.0-use.local
+  resolution: "@pkgs/canary@workspace:pkgs/canary"
+  languageName: unknown
+  linkType: soft
+
 "@pkgs/health@workspace:^, @pkgs/health@workspace:pkgs/health":
   version: 0.0.0-use.local
   resolution: "@pkgs/health@workspace:pkgs/health"
   dependencies:
     "@modern/service": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@pkgs/time@workspace:pkgs/time":
+  version: 0.0.0-use.local
+  resolution: "@pkgs/time@workspace:pkgs/time"
+  languageName: unknown
+  linkType: soft
+
+"@profiles/hardware@workspace:profiles/hardware":
+  version: 0.0.0-use.local
+  resolution: "@profiles/hardware@workspace:profiles/hardware"
+  languageName: unknown
+  linkType: soft
+
+"@profiles/interfaces@workspace:profiles/interfaces":
+  version: 0.0.0-use.local
+  resolution: "@profiles/interfaces@workspace:profiles/interfaces"
+  languageName: unknown
+  linkType: soft
+
+"@profiles/web-weak@workspace:profiles/web-weak":
+  version: 0.0.0-use.local
+  resolution: "@profiles/web-weak@workspace:profiles/web-weak"
+  languageName: unknown
+  linkType: soft
+
+"@profiles/web@workspace:profiles/web":
+  version: 0.0.0-use.local
+  resolution: "@profiles/web@workspace:profiles/web"
+  languageName: unknown
+  linkType: soft
+
+"@providers/github@workspace:providers/github":
+  version: 0.0.0-use.local
+  resolution: "@providers/github@workspace:providers/github"
+  languageName: unknown
+  linkType: soft
+
+"@providers/google@workspace:providers/google":
+  version: 0.0.0-use.local
+  resolution: "@providers/google@workspace:providers/google"
+  languageName: unknown
+  linkType: soft
+
+"@providers/interfaces@workspace:providers/interfaces":
+  version: 0.0.0-use.local
+  resolution: "@providers/interfaces@workspace:providers/interfaces"
+  languageName: unknown
+  linkType: soft
+
+"@providers/secret@workspace:providers/secret":
+  version: 0.0.0-use.local
+  resolution: "@providers/secret@workspace:providers/secret"
   languageName: unknown
   linkType: soft
 
@@ -321,6 +387,36 @@ __metadata:
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
+
+"@stores/event@workspace:stores/event":
+  version: 0.0.0-use.local
+  resolution: "@stores/event@workspace:stores/event"
+  languageName: unknown
+  linkType: soft
+
+"@stores/gcp@workspace:stores/gcp":
+  version: 0.0.0-use.local
+  resolution: "@stores/gcp@workspace:stores/gcp"
+  languageName: unknown
+  linkType: soft
+
+"@stores/interfaces@workspace:stores/interfaces":
+  version: 0.0.0-use.local
+  resolution: "@stores/interfaces@workspace:stores/interfaces"
+  languageName: unknown
+  linkType: soft
+
+"@stores/memory@workspace:stores/memory":
+  version: 0.0.0-use.local
+  resolution: "@stores/memory@workspace:stores/memory"
+  languageName: unknown
+  linkType: soft
+
+"@stores/s3@workspace:stores/s3":
+  version: 0.0.0-use.local
+  resolution: "@stores/s3@workspace:stores/s3"
+  languageName: unknown
+  linkType: soft
 
 "@tootallnate/once@npm:2":
   version: 2.0.0
@@ -522,6 +618,12 @@ __metadata:
 "dist@workspace:dist":
   version: 0.0.0-use.local
   resolution: "dist@workspace:dist"
+  languageName: unknown
+  linkType: soft
+
+"docs@workspace:docs":
+  version: 0.0.0-use.local
+  resolution: "docs@workspace:docs"
   languageName: unknown
   linkType: soft
 
@@ -1541,11 +1643,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^4.9.4#optional!builtin<compat/typescript>":
   version: 4.9.4
-  resolution: "typescript@patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=ad5954"
+  resolution: "typescript@patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=23ec76"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: e7321aeb1e2c0e3c19599808707208e2b730de8d17a5624f0a7297b9a1ffa39974edd4a819108b3b635bc00171476ddfa339e04d928a03ce8d8c6944cb8ec008
+  checksum: 8944d2310e83395ea5b50a4f3d12fbd8f834a9fd8b0b9a2316f24e78890b04d0015a434d8d825a84971caf3c4bd0d52c79f38d3dce80e05a1892dc9f7fa611f8
   languageName: node
   linkType: hard
 
