@@ -1,4 +1,4 @@
-import { Route } from '@modern/service/types'
+import { Route } from '@modern/service/interfaces'
 
 import { handler } from './handler'
 

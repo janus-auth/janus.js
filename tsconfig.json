@@ -8,7 +8,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false
+    "noImplicitAny": true,
+    "resolveJsonModule": true
   },
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Recommended"

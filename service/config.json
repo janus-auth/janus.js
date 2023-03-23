@@ -1,0 +1,11 @@
+{
+  "port": 3000,
+  "host": "localhost",
+  "profiles": ["web", "web-weak", "hardware"],
+  "providers": ["github", "google", "secret"],
+  "store": {
+    "type": "memory",
+    "host": "localhost",
+    "port": 6379
+  }
+}

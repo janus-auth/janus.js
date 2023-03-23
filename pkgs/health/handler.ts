@@ -1,4 +1,4 @@
-import { Handler } from '@modern/service/types'
+import { Handler } from '@modern/service/interfaces'
 import { ServerHttp2Stream } from 'node:http2'
 
 export const handler: Handler = async (stream: ServerHttp2Stream, headers) => {

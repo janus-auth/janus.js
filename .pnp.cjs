@@ -18,12 +18,20 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:dist"\
     },\
     {\
+      "name": "docs",\
+      "reference": "workspace:docs"\
+    },\
+    {\
       "name": "infra",\
       "reference": "workspace:infra"\
     },\
     {\
       "name": "@libs/build",\
       "reference": "workspace:libs/build"\
+    },\
+    {\
+      "name": "@libs/config",\
+      "reference": "workspace:libs/config"\
     },\
     {\
       "name": "@libs/router",\
@@ -34,12 +42,72 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:libs/server"\
     },\
     {\
+      "name": "@pkgs/canary",\
+      "reference": "workspace:pkgs/canary"\
+    },\
+    {\
       "name": "@pkgs/health",\
       "reference": "workspace:pkgs/health"\
     },\
     {\
+      "name": "@pkgs/time",\
+      "reference": "workspace:pkgs/time"\
+    },\
+    {\
+      "name": "@profiles/hardware",\
+      "reference": "workspace:profiles/hardware"\
+    },\
+    {\
+      "name": "@profiles/interfaces",\
+      "reference": "workspace:profiles/interfaces"\
+    },\
+    {\
+      "name": "@profiles/web",\
+      "reference": "workspace:profiles/web"\
+    },\
+    {\
+      "name": "@profiles/web-weak",\
+      "reference": "workspace:profiles/web-weak"\
+    },\
+    {\
+      "name": "@providers/github",\
+      "reference": "workspace:providers/github"\
+    },\
+    {\
+      "name": "@providers/google",\
+      "reference": "workspace:providers/google"\
+    },\
+    {\
+      "name": "@providers/interfaces",\
+      "reference": "workspace:providers/interfaces"\
+    },\
+    {\
+      "name": "@providers/secret",\
+      "reference": "workspace:providers/secret"\
+    },\
+    {\
       "name": "@modern/service",\
       "reference": "workspace:service"\
+    },\
+    {\
+      "name": "@stores/event",\
+      "reference": "workspace:stores/event"\
+    },\
+    {\
+      "name": "@stores/gcp",\
+      "reference": "workspace:stores/gcp"\
+    },\
+    {\
+      "name": "@stores/interfaces",\
+      "reference": "workspace:stores/interfaces"\
+    },\
+    {\
+      "name": "@stores/memory",\
+      "reference": "workspace:stores/memory"\
+    },\
+    {\
+      "name": "@stores/s3",\
+      "reference": "workspace:stores/s3"\
     }\
   ],\
   "enableTopLevelFallback": true,\
@@ -47,11 +115,28 @@ const RAW_RUNTIME_STATE =
   "fallbackExclusionList": [\
     ["@janus/janus.js", ["workspace:."]],\
     ["@libs/build", ["workspace:libs/build"]],\
+    ["@libs/config", ["workspace:libs/config"]],\
     ["@libs/router", ["workspace:libs/router"]],\
     ["@libs/server", ["workspace:libs/server"]],\
     ["@modern/service", ["workspace:service"]],\
+    ["@pkgs/canary", ["workspace:pkgs/canary"]],\
     ["@pkgs/health", ["workspace:pkgs/health"]],\
+    ["@pkgs/time", ["workspace:pkgs/time"]],\
+    ["@profiles/hardware", ["workspace:profiles/hardware"]],\
+    ["@profiles/interfaces", ["workspace:profiles/interfaces"]],\
+    ["@profiles/web", ["workspace:profiles/web"]],\
+    ["@profiles/web-weak", ["workspace:profiles/web-weak"]],\
+    ["@providers/github", ["workspace:providers/github"]],\
+    ["@providers/google", ["workspace:providers/google"]],\
+    ["@providers/interfaces", ["workspace:providers/interfaces"]],\
+    ["@providers/secret", ["workspace:providers/secret"]],\
+    ["@stores/event", ["workspace:stores/event"]],\
+    ["@stores/gcp", ["workspace:stores/gcp"]],\
+    ["@stores/interfaces", ["workspace:stores/interfaces"]],\
+    ["@stores/memory", ["workspace:stores/memory"]],\
+    ["@stores/s3", ["workspace:stores/s3"]],\
     ["dist", ["workspace:dist"]],\
+    ["docs", ["workspace:docs"]],\
     ["infra", ["workspace:infra"]]\
   ],\
   "fallbackPool": [\
@@ -65,7 +150,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:18.11.18"],\
           ["rome", "npm:11.0.0"],\
           ["tsx", "npm:3.12.2"],\
-          ["typescript", "patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=ad5954"]\
+          ["typescript", "patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=23ec76"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -333,7 +418,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:18.11.18"],\
           ["rome", "npm:11.0.0"],\
           ["tsx", "npm:3.12.2"],\
-          ["typescript", "patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=ad5954"]\
+          ["typescript", "patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=23ec76"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -344,6 +429,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@libs/build", "workspace:libs/build"],\
           ["esbuild", "npm:0.17.4"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@libs/config", [\
+      ["workspace:libs/config", {\
+        "packageLocation": "./libs/config/",\
+        "packageDependencies": [\
+          ["@libs/config", "workspace:libs/config"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -400,12 +494,102 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@pkgs/canary", [\
+      ["workspace:pkgs/canary", {\
+        "packageLocation": "./pkgs/canary/",\
+        "packageDependencies": [\
+          ["@pkgs/canary", "workspace:pkgs/canary"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@pkgs/health", [\
       ["workspace:pkgs/health", {\
         "packageLocation": "./pkgs/health/",\
         "packageDependencies": [\
           ["@pkgs/health", "workspace:pkgs/health"],\
           ["@modern/service", "workspace:service"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@pkgs/time", [\
+      ["workspace:pkgs/time", {\
+        "packageLocation": "./pkgs/time/",\
+        "packageDependencies": [\
+          ["@pkgs/time", "workspace:pkgs/time"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@profiles/hardware", [\
+      ["workspace:profiles/hardware", {\
+        "packageLocation": "./profiles/hardware/",\
+        "packageDependencies": [\
+          ["@profiles/hardware", "workspace:profiles/hardware"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@profiles/interfaces", [\
+      ["workspace:profiles/interfaces", {\
+        "packageLocation": "./profiles/interfaces/",\
+        "packageDependencies": [\
+          ["@profiles/interfaces", "workspace:profiles/interfaces"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@profiles/web", [\
+      ["workspace:profiles/web", {\
+        "packageLocation": "./profiles/web/",\
+        "packageDependencies": [\
+          ["@profiles/web", "workspace:profiles/web"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@profiles/web-weak", [\
+      ["workspace:profiles/web-weak", {\
+        "packageLocation": "./profiles/web-weak/",\
+        "packageDependencies": [\
+          ["@profiles/web-weak", "workspace:profiles/web-weak"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@providers/github", [\
+      ["workspace:providers/github", {\
+        "packageLocation": "./providers/github/",\
+        "packageDependencies": [\
+          ["@providers/github", "workspace:providers/github"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@providers/google", [\
+      ["workspace:providers/google", {\
+        "packageLocation": "./providers/google/",\
+        "packageDependencies": [\
+          ["@providers/google", "workspace:providers/google"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@providers/interfaces", [\
+      ["workspace:providers/interfaces", {\
+        "packageLocation": "./providers/interfaces/",\
+        "packageDependencies": [\
+          ["@providers/interfaces", "workspace:providers/interfaces"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@providers/secret", [\
+      ["workspace:providers/secret", {\
+        "packageLocation": "./providers/secret/",\
+        "packageDependencies": [\
+          ["@providers/secret", "workspace:providers/secret"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -462,6 +646,51 @@ const RAW_RUNTIME_STATE =
           ["@rometools/cli-win32-x64", "npm:11.0.0"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@stores/event", [\
+      ["workspace:stores/event", {\
+        "packageLocation": "./stores/event/",\
+        "packageDependencies": [\
+          ["@stores/event", "workspace:stores/event"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@stores/gcp", [\
+      ["workspace:stores/gcp", {\
+        "packageLocation": "./stores/gcp/",\
+        "packageDependencies": [\
+          ["@stores/gcp", "workspace:stores/gcp"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@stores/interfaces", [\
+      ["workspace:stores/interfaces", {\
+        "packageLocation": "./stores/interfaces/",\
+        "packageDependencies": [\
+          ["@stores/interfaces", "workspace:stores/interfaces"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@stores/memory", [\
+      ["workspace:stores/memory", {\
+        "packageLocation": "./stores/memory/",\
+        "packageDependencies": [\
+          ["@stores/memory", "workspace:stores/memory"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@stores/s3", [\
+      ["workspace:stores/s3", {\
+        "packageLocation": "./stores/s3/",\
+        "packageDependencies": [\
+          ["@stores/s3", "workspace:stores/s3"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@tootallnate/once", [\
@@ -708,6 +937,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./dist/",\
         "packageDependencies": [\
           ["dist", "workspace:dist"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["docs", [\
+      ["workspace:docs", {\
+        "packageLocation": "./docs/",\
+        "packageDependencies": [\
+          ["docs", "workspace:docs"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1728,10 +1966,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=ad5954", {\
-        "packageLocation": "../../../.yarn/berry/cache/typescript-patch-35d2828cdf-9.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=23ec76", {\
+        "packageLocation": "../../../.yarn/berry/cache/typescript-patch-f3fa2bb1de-9.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=ad5954"]\
+          ["typescript", "patch:typescript@npm%3A4.9.4#optional!builtin<compat/typescript>::version=4.9.4&hash=23ec76"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7970,6 +8208,291 @@ function packageImportsResolve({
   throwImportNotDefined(name, packageJSONUrl, base);
 }
 
+const flagSymbol = Symbol('arg flag');
+
+class ArgError extends Error {
+	constructor(msg, code) {
+		super(msg);
+		this.name = 'ArgError';
+		this.code = code;
+
+		Object.setPrototypeOf(this, ArgError.prototype);
+	}
+}
+
+function arg(
+	opts,
+	{
+		argv = process.argv.slice(2),
+		permissive = false,
+		stopAtPositional = false
+	} = {}
+) {
+	if (!opts) {
+		throw new ArgError(
+			'argument specification object is required',
+			'ARG_CONFIG_NO_SPEC'
+		);
+	}
+
+	const result = { _: [] };
+
+	const aliases = {};
+	const handlers = {};
+
+	for (const key of Object.keys(opts)) {
+		if (!key) {
+			throw new ArgError(
+				'argument key cannot be an empty string',
+				'ARG_CONFIG_EMPTY_KEY'
+			);
+		}
+
+		if (key[0] !== '-') {
+			throw new ArgError(
+				`argument key must start with '-' but found: '${key}'`,
+				'ARG_CONFIG_NONOPT_KEY'
+			);
+		}
+
+		if (key.length === 1) {
+			throw new ArgError(
+				`argument key must have a name; singular '-' keys are not allowed: ${key}`,
+				'ARG_CONFIG_NONAME_KEY'
+			);
+		}
+
+		if (typeof opts[key] === 'string') {
+			aliases[key] = opts[key];
+			continue;
+		}
+
+		let type = opts[key];
+		let isFlag = false;
+
+		if (
+			Array.isArray(type) &&
+			type.length === 1 &&
+			typeof type[0] === 'function'
+		) {
+			const [fn] = type;
+			type = (value, name, prev = []) => {
+				prev.push(fn(value, name, prev[prev.length - 1]));
+				return prev;
+			};
+			isFlag = fn === Boolean || fn[flagSymbol] === true;
+		} else if (typeof type === 'function') {
+			isFlag = type === Boolean || type[flagSymbol] === true;
+		} else {
+			throw new ArgError(
+				`type missing or not a function or valid array type: ${key}`,
+				'ARG_CONFIG_VAD_TYPE'
+			);
+		}
+
+		if (key[1] !== '-' && key.length > 2) {
+			throw new ArgError(
+				`short argument keys (with a single hyphen) must have only one character: ${key}`,
+				'ARG_CONFIG_SHORTOPT_TOOLONG'
+			);
+		}
+
+		handlers[key] = [type, isFlag];
+	}
+
+	for (let i = 0, len = argv.length; i < len; i++) {
+		const wholeArg = argv[i];
+
+		if (stopAtPositional && result._.length > 0) {
+			result._ = result._.concat(argv.slice(i));
+			break;
+		}
+
+		if (wholeArg === '--') {
+			result._ = result._.concat(argv.slice(i + 1));
+			break;
+		}
+
+		if (wholeArg.length > 1 && wholeArg[0] === '-') {
+			/* eslint-disable operator-linebreak */
+			const separatedArguments =
+				wholeArg[1] === '-' || wholeArg.length === 2
+					? [wholeArg]
+					: wholeArg
+							.slice(1)
+							.split('')
+							.map((a) => `-${a}`);
+			/* eslint-enable operator-linebreak */
+
+			for (let j = 0; j < separatedArguments.length; j++) {
+				const arg = separatedArguments[j];
+				const [originalArgName, argStr] =
+					arg[1] === '-' ? arg.split(/=(.*)/, 2) : [arg, undefined];
+
+				let argName = originalArgName;
+				while (argName in aliases) {
+					argName = aliases[argName];
+				}
+
+				if (!(argName in handlers)) {
+					if (permissive) {
+						result._.push(arg);
+						continue;
+					} else {
+						throw new ArgError(
+							`unknown or unexpected option: ${originalArgName}`,
+							'ARG_UNKNOWN_OPTION'
+						);
+					}
+				}
+
+				const [type, isFlag] = handlers[argName];
+
+				if (!isFlag && j + 1 < separatedArguments.length) {
+					throw new ArgError(
+						`option requires argument (but was followed by another short argument): ${originalArgName}`,
+						'ARG_MISSING_REQUIRED_SHORTARG'
+					);
+				}
+
+				if (isFlag) {
+					result[argName] = type(true, argName, result[argName]);
+				} else if (argStr === undefined) {
+					if (
+						argv.length < i + 2 ||
+						(argv[i + 1].length > 1 &&
+							argv[i + 1][0] === '-' &&
+							!(
+								argv[i + 1].match(/^-?\d*(\.(?=\d))?\d*$/) &&
+								(type === Number ||
+									// eslint-disable-next-line no-undef
+									(typeof BigInt !== 'undefined' && type === BigInt))
+							))
+					) {
+						const extended =
+							originalArgName === argName ? '' : ` (alias for ${argName})`;
+						throw new ArgError(
+							`option requires argument: ${originalArgName}${extended}`,
+							'ARG_MISSING_REQUIRED_LONGARG'
+						);
+					}
+
+					result[argName] = type(argv[i + 1], argName, result[argName]);
+					++i;
+				} else {
+					result[argName] = type(argStr, argName, result[argName]);
+				}
+			}
+		} else {
+			result._.push(wholeArg);
+		}
+	}
+
+	return result;
+}
+
+arg.flag = (fn) => {
+	fn[flagSymbol] = true;
+	return fn;
+};
+
+// Utility types
+arg.COUNT = arg.flag((v, name, existingCount) => (existingCount || 0) + 1);
+
+// Expose error class
+arg.ArgError = ArgError;
+
+var arg_1 = arg;
+
+/**
+  @license
+  The MIT License (MIT)
+
+  Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+*/
+function getOptionValue(opt) {
+  parseOptions();
+  return options[opt];
+}
+let options;
+function parseOptions() {
+  if (!options) {
+    options = {
+      "--conditions": [],
+      ...parseArgv(getNodeOptionsEnvArgv()),
+      ...parseArgv(process.execArgv)
+    };
+  }
+}
+function parseArgv(argv) {
+  return arg_1(
+    {
+      "--conditions": [String],
+      "-C": "--conditions"
+    },
+    {
+      argv,
+      permissive: true
+    }
+  );
+}
+function getNodeOptionsEnvArgv() {
+  const errors = [];
+  const envArgv = ParseNodeOptionsEnvVar(process.env.NODE_OPTIONS || "", errors);
+  if (errors.length !== 0) ;
+  return envArgv;
+}
+function ParseNodeOptionsEnvVar(node_options, errors) {
+  const env_argv = [];
+  let is_in_string = false;
+  let will_start_new_arg = true;
+  for (let index = 0; index < node_options.length; ++index) {
+    let c = node_options[index];
+    if (c === "\\" && is_in_string) {
+      if (index + 1 === node_options.length) {
+        errors.push("invalid value for NODE_OPTIONS (invalid escape)\n");
+        return env_argv;
+      } else {
+        c = node_options[++index];
+      }
+    } else if (c === " " && !is_in_string) {
+      will_start_new_arg = true;
+      continue;
+    } else if (c === '"') {
+      is_in_string = !is_in_string;
+      continue;
+    }
+    if (will_start_new_arg) {
+      env_argv.push(c);
+      will_start_new_arg = false;
+    } else {
+      env_argv[env_argv.length - 1] += c;
+    }
+  }
+  if (is_in_string) {
+    errors.push("invalid value for NODE_OPTIONS (unterminated string)\n");
+  }
+  return env_argv;
+}
+
 function makeApi(runtimeState, opts) {
   const alwaysWarnOnFallback = Number(process.env.PNP_ALWAYS_WARN_ON_FALLBACK) > 0;
   const debugLevel = Number(process.env.PNP_DEBUG_LEVEL);
@@ -8083,7 +8606,12 @@ function makeApi(runtimeState, opts) {
         return true;
     return false;
   }
-  const defaultExportsConditions = /* @__PURE__ */ new Set([`default`, `node`, `require`]);
+  const defaultExportsConditions = /* @__PURE__ */ new Set([
+    `default`,
+    `node`,
+    `require`,
+    ...getOptionValue(`--conditions`)
+  ]);
   function applyNodeExportsResolution(unqualifiedPath, conditions = defaultExportsConditions) {
     const locator = findPackageLocator(ppath.join(unqualifiedPath, `internal.js`), {
       resolveIgnored: true,

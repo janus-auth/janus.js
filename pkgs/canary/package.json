@@ -1,4 +1,4 @@
 {
-  "name": "canary",
-  "packageManager": "yarn@4.0.0-rc.39"
+  "name": "@pkgs/canary",
+  "packageManager": "yarn@4.0.0-rc.40"
 }
