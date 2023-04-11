@@ -1,7 +1,7 @@
 {
-  "name": "@modern/service",
+  "name": "@svcs/auth-service",
   "main": "index.ts",
-  "packageManager": "yarn@4.0.0-rc.40",
+  "packageManager": "yarn@4.0.0-rc.42",
   "dependencies": {
     "@libs/router": "workspace:^",
     "@libs/server": "workspace:^",

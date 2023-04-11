@@ -1,14 +1,37 @@
 # janus.js
-Janus javascript implementation
+Janus javascript implementation.
 
-```mermaid
-flowchart TD
-    id1(((This is the text in the circle)))
-    subgraph one
-        id1(password)
-    end
-    subgraph workers
-        id2(password)
-    end
+For the design documents visit [this](https://github.com/janus-auth/design).
 
-```
+# How to start
+
+## Without docker
+
+**Prerequisites**
+
+It requires Node 18 or 19 and Yarn v4.
+
+To install yarn:
+
+`corepack enable`
+`corepack prepare yarn@stable --activate`
+
+**Install deps**
+
+`yarn`
+
+**Dev mode:**
+
+Open two terminals. 
+
+In the first one you'll build the code:
+`yarn watch`
+
+In the second one:
+`yarn serve`
+
+
+**One shot:**
+
+`yarn build && yarn start`
+

@@ -11,5 +11,7 @@ export type Route = {
 	permissions?: string[]
 }
 
+export { Router } from './router'
+
 export { routerFactory } from './router'
 export { notFoundRoute, notFoundHandler } from './notFound'

@@ -1,17 +1,18 @@
 {
   "name": "@janus/janus.js",
-  "packageManager": "yarn@4.0.0-rc.40",
+  "packageManager": "yarn@4.0.0-rc.42",
   "scripts": {
     "build": "node build.mjs",
     "watch": "node build.mjs watch",
     "serve": "node build.mjs serve",
     "start": "yarn dist/ start",
     "build:docker": "",
-    "format": "rome format service pkgs libs --write --use-server",
-    "lint": "rome check service pkgs libs --use-server",
-    "lint:apply": "rome check service pkgs libs --apply-suggested --use-server",
+    "format": "rome format libs pkgs profiles providers stores svcs --write --use-server",
+    "lint": "rome check libs pkgs profiles providers stores svcs --use-server",
+    "lint:apply": "rome check libs pkgs profiles providers stores svcs --apply-suggested --use-server",
     "lint:fix": "yarn lint:apply && yarn format",
     "test": "tsc --noEmit && node --loader tsx --test",
+    "typecheck": "tsc --noEmit",
     "update:yarn": "yarn set version canary"
   },
   "workspaces": [
@@ -23,6 +24,7 @@
     "profiles/*",
     "providers/*",
     "service",
+    "svcs/*",
     "stores/*"
   ],
   "devDependencies": {

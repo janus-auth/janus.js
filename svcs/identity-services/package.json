@@ -1,4 +1,4 @@
 {
-  "name": "@libs/router",
+  "name": "@svcs/identity-services",
   "packageManager": "yarn@4.0.0-rc.42"
 }

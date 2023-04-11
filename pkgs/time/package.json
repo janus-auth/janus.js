@@ -1,4 +1,7 @@
 {
   "name": "@pkgs/time",
-  "packageManager": "yarn@4.0.0-rc.40"
+  "packageManager": "yarn@4.0.0-rc.42",
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.4.3"
+  }
 }

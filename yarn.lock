@@ -222,6 +222,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@js-temporal/polyfill@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@js-temporal/polyfill@npm:0.4.3"
+  dependencies:
+    jsbi: "npm:^4.1.0"
+    tslib: "npm:^2.3.1"
+  checksum: ebf6d996a5235703d8543a6cf2c698015061e48e0d62b7165970c9f8a12245bf39c301d56acf69113ba5a2ad7431c31a8200d9ae7fb0858bf427274307620425
+  languageName: node
+  linkType: hard
+
 "@libs/build@workspace:^, @libs/build@workspace:libs/build":
   version: 0.0.0-use.local
   resolution: "@libs/build@workspace:libs/build"
@@ -245,16 +255,8 @@ __metadata:
 "@libs/server@workspace:^, @libs/server@workspace:libs/server":
   version: 0.0.0-use.local
   resolution: "@libs/server@workspace:libs/server"
-  languageName: unknown
-  linkType: soft
-
-"@modern/service@workspace:^, @modern/service@workspace:service":
-  version: 0.0.0-use.local
-  resolution: "@modern/service@workspace:service"
   dependencies:
     "@libs/router": "workspace:^"
-    "@libs/server": "workspace:^"
-    "@pkgs/health": "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -288,13 +290,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pkgs/health@workspace:pkgs/health"
   dependencies:
-    "@modern/service": "workspace:^"
+    "@libs/router": "workspace:^"
+    "@svcs/auth-service": "workspace:^"
   languageName: unknown
   linkType: soft
 
 "@pkgs/time@workspace:pkgs/time":
   version: 0.0.0-use.local
   resolution: "@pkgs/time@workspace:pkgs/time"
+  dependencies:
+    "@js-temporal/polyfill": "npm:^0.4.3"
   languageName: unknown
   linkType: soft
 
@@ -415,6 +420,40 @@ __metadata:
 "@stores/s3@workspace:stores/s3":
   version: 0.0.0-use.local
   resolution: "@stores/s3@workspace:stores/s3"
+  languageName: unknown
+  linkType: soft
+
+"@svcs/auth-service@workspace:^, @svcs/auth-service@workspace:svcs/auth-service":
+  version: 0.0.0-use.local
+  resolution: "@svcs/auth-service@workspace:svcs/auth-service"
+  dependencies:
+    "@libs/router": "workspace:^"
+    "@libs/server": "workspace:^"
+    "@pkgs/health": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@svcs/datastore@workspace:svcs/datastore":
+  version: 0.0.0-use.local
+  resolution: "@svcs/datastore@workspace:svcs/datastore"
+  languageName: unknown
+  linkType: soft
+
+"@svcs/eventbus@workspace:svcs/eventbus":
+  version: 0.0.0-use.local
+  resolution: "@svcs/eventbus@workspace:svcs/eventbus"
+  languageName: unknown
+  linkType: soft
+
+"@svcs/hsm-service@workspace:svcs/hsm-service":
+  version: 0.0.0-use.local
+  resolution: "@svcs/hsm-service@workspace:svcs/hsm-service"
+  languageName: unknown
+  linkType: soft
+
+"@svcs/identity-services@workspace:svcs/identity-services":
+  version: 0.0.0-use.local
+  resolution: "@svcs/identity-services@workspace:svcs/identity-services"
   languageName: unknown
   linkType: soft
 
@@ -618,12 +657,8 @@ __metadata:
 "dist@workspace:dist":
   version: 0.0.0-use.local
   resolution: "dist@workspace:dist"
-  languageName: unknown
-  linkType: soft
-
-"docs@workspace:docs":
-  version: 0.0.0-use.local
-  resolution: "docs@workspace:docs"
+  dependencies:
+    "@js-temporal/polyfill": "npm:^0.4.3"
   languageName: unknown
   linkType: soft
 
@@ -1168,6 +1203,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsbi@npm:^4.1.0":
+  version: 4.3.0
+  resolution: "jsbi@npm:4.3.0"
+  checksum: f74990e76c2e980f0bbf832ad0551820d2e4b76896d0196cacf720d8fb0b7a52c14f7efcb0ad5f0ae0f18303a0bfbc0ff6924835e582692b689bf93aae5eac36
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^6.0.0":
   version: 6.0.0
   resolution: "lru-cache@npm:6.0.0"
@@ -1614,6 +1656,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.3.1":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: 5a6ee935f56cd653af29de928483acbab7323f964b053e98b6b318abc69431fb0e4f660c4f4a396e2e93852510bef25eeb9f1d951d060b2d7bcc313811e5da6f
+  languageName: node
+  linkType: hard
+
 "tsx@npm:^3.12.6":
   version: 3.12.6
   resolution: "tsx@npm:3.12.6"
@@ -1643,11 +1692,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.0.2#optional!builtin<compat/typescript>":
   version: 5.0.2
-  resolution: "typescript@patch:typescript@npm%3A5.0.2#optional!builtin<compat/typescript>::version=5.0.2&hash=85af82"
+  resolution: "typescript@patch:typescript@npm%3A5.0.2#optional!builtin<compat/typescript>::version=5.0.2&hash=b5f058"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 152c6851fd46cd63988ae112ede3b64aab3b10f9a33f5c8c5bab41af3bc0ec59dd265349da67890c80f1eba156a5beb0fb78ece94b40b3031c1eea3cece1e233
+  checksum: 99fed54ef1fa7a2d1c235d3f6e23212f18542cf5ab09e1a9e285a4a97d9f050d6919715cd79107e295de833adf808134576a829b3400f88ffd48415730d90742
   languageName: node
   linkType: hard
 

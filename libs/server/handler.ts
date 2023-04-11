@@ -1,7 +1,8 @@
 import { Handler } from './index'
+import { Router } from '@libs/router'
 
 export const mainHandlerFactory =
-	(router): Handler =>
+	(router: Router): Handler =>
 	async (stream, headers) => {
 		const path = headers[':path'] ?? ''
 

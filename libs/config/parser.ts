@@ -1,8 +1,3 @@
+export type Config = {}
 
-export type Config = {
-
-}
-
-export const configParser = (config: Config): void => {
-
-}
+export const configParser = (config: Config): void => {}

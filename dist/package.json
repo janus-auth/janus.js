@@ -3,5 +3,8 @@
   "scripts": {
     "start": "node server.mjs"
   },
-  "packageManager": "yarn@4.0.0-rc.36"
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.4.3"
+  },
+  "packageManager": "yarn@4.0.0-rc.42"
 }

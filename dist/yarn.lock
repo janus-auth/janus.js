@@ -3,9 +3,36 @@
 
 __metadata:
   version: 7
+  cacheKey: 9
+
+"@js-temporal/polyfill@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@js-temporal/polyfill@npm:0.4.3"
+  dependencies:
+    jsbi: "npm:^4.1.0"
+    tslib: "npm:^2.3.1"
+  checksum: ebf6d996a5235703d8543a6cf2c698015061e48e0d62b7165970c9f8a12245bf39c301d56acf69113ba5a2ad7431c31a8200d9ae7fb0858bf427274307620425
+  languageName: node
+  linkType: hard
 
 "dist@workspace:.":
   version: 0.0.0-use.local
   resolution: "dist@workspace:."
+  dependencies:
+    "@js-temporal/polyfill": "npm:^0.4.3"
   languageName: unknown
   linkType: soft
+
+"jsbi@npm:^4.1.0":
+  version: 4.3.0
+  resolution: "jsbi@npm:4.3.0"
+  checksum: f74990e76c2e980f0bbf832ad0551820d2e4b76896d0196cacf720d8fb0b7a52c14f7efcb0ad5f0ae0f18303a0bfbc0ff6924835e582692b689bf93aae5eac36
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.3.1":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: 5a6ee935f56cd653af29de928483acbab7323f964b053e98b6b318abc69431fb0e4f660c4f4a396e2e93852510bef25eeb9f1d951d060b2d7bcc313811e5da6f
+  languageName: node
+  linkType: hard
