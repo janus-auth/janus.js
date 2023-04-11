@@ -534,7 +534,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./pkgs/time/",\
         "packageDependencies": [\
           ["@pkgs/time", "workspace:pkgs/time"],\
-          ["@js-temporal/polyfill", "npm:0.4.3"]\
+          ["@js-temporal/polyfill", "npm:0.4.3"],\
+          ["@libs/router", "workspace:libs/router"],\
+          ["@svcs/auth-service", "workspace:svcs/auth-service"]\
         ],\
         "linkType": "SOFT"\
       }]\

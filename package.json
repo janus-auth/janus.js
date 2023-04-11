@@ -11,6 +11,7 @@
     "lint": "rome check libs pkgs profiles providers stores svcs --use-server",
     "lint:apply": "rome check libs pkgs profiles providers stores svcs --apply-suggested --use-server",
     "lint:fix": "yarn lint:apply && yarn format",
+    "lint:file": "rome format ${FOO:+} --write --use-server",
     "test": "tsc --noEmit && node --loader tsx --test",
     "typecheck": "tsc --noEmit",
     "update:yarn": "yarn set version canary"

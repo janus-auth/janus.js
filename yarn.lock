@@ -300,6 +300,8 @@ __metadata:
   resolution: "@pkgs/time@workspace:pkgs/time"
   dependencies:
     "@js-temporal/polyfill": "npm:^0.4.3"
+    "@libs/router": "workspace:^"
+    "@svcs/auth-service": "workspace:^"
   languageName: unknown
   linkType: soft
 

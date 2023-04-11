@@ -2,6 +2,8 @@
   "name": "@pkgs/time",
   "packageManager": "yarn@4.0.0-rc.42",
   "dependencies": {
-    "@js-temporal/polyfill": "^0.4.3"
+    "@js-temporal/polyfill": "^0.4.3",
+    "@libs/router": "workspace:^",
+    "@svcs/auth-service": "workspace:^"
   }
 }
