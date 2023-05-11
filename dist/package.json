@@ -1,0 +1,8 @@
+{
+  "name": "@janus/dist",
+  "devDependencies": {
+    "nodemon": "2.0.22"
+  },
+  "type": "module",
+  "packageManager": "yarn@4.0.0-rc.43"
+}

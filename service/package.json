@@ -1,0 +1,10 @@
+{
+  "name": "@janus/service",
+  "packageManager": "yarn@4.0.0-rc.43",
+  "dependencies": {
+    "@libs/keychain": "workspace:*",
+    "@libs/router": "workspace:*",
+    "@routes/hello": "workspace:*",
+    "@routes/system": "workspace:*"
+  }
+}

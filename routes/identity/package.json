@@ -1,0 +1,8 @@
+{
+  "name": "@routes/identity",
+  "main": "index.mts",
+  "dependencies": {
+    "@libs/router": "workspace:*"
+  },
+  "packageManager": "yarn@4.0.0-rc.43"
+}

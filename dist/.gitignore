@@ -1,7 +1,3 @@
-# Secrets
-infra/.env
-
-
 ## Yarn
 .yarn/*
 !.yarn/patches
@@ -17,5 +13,4 @@ infra/.env
 #!.yarn/cache
 .pnp.*
 
-# IntelliJ
-.idea
+node_modules
