@@ -1,0 +1,9 @@
+{
+  "name": "@routes/system",
+  "main": "index.mts",
+  "dependencies": {
+    "@libs/keychain": "workspace:*",
+    "@libs/router": "workspace:*"
+  },
+  "packageManager": "yarn@4.0.0-rc.43"
+}

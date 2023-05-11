@@ -1,13 +1,8 @@
-import {buildHelper} from '@libs/build'
+import { buildHelper } from '@libs/build'
 
-const external = [
-]
-
-
-await buildHelper({
-    name: 'main',
-    entryPoints: ['service/server.ts'],
-    external,
+buildHelper({
+    name: 'janus-service',
+    entryPoints: ['service/src/index.mts'],
+    outDir: 'app/src',
+    external: [],
 })
-
-

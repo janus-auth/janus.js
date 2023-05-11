@@ -1,7 +1,0 @@
-{
-  "name": "dist",
-  "scripts": {
-    "start": "node server.mjs"
-  },
-  "packageManager": "yarn@4.0.0-rc.36"
-}

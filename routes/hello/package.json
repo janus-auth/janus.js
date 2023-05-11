@@ -1,0 +1,8 @@
+{
+  "name": "@routes/hello",
+  "main": "route.mts",
+  "dependencies": {
+    "@libs/router": "workspace:*"
+  },
+  "packageManager": "yarn@4.0.0-rc.43"
+}

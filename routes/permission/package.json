@@ -1,5 +1,5 @@
 {
-  "name": "@libs/router",
+  "name": "@routes/permission",
   "main": "index.mts",
   "packageManager": "yarn@4.0.0-rc.43"
 }

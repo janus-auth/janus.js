@@ -1,35 +1,41 @@
 {
   "name": "@janus/janus.js",
-  "packageManager": "yarn@4.0.0-rc.40",
+  "version": "0.0.1",
   "scripts": {
-    "build": "node build.mjs",
-    "watch": "node build.mjs watch",
-    "serve": "node build.mjs serve",
-    "start": "yarn dist/ start",
-    "build:docker": "",
-    "format": "rome format service pkgs libs --write --use-server",
-    "lint": "rome check service pkgs libs --use-server",
-    "lint:apply": "rome check service pkgs libs --apply-suggested --use-server",
-    "lint:fix": "yarn lint:apply && yarn format",
-    "test": "tsc --noEmit && node --loader tsx --test",
-    "update:yarn": "yarn set version canary"
+    "build:dev": "node build.mjs",
+    "build:prod": "NODE_ENV=production node build.mjs",
+    "build:tests": "node build.tests.mjs",
+    "build:clean": "echo \" Not implemented yet! \"",
+    "dev:start": "docker compose -f infra/dev.compose.yml up --build",
+    "dev:watch": "docker compose -f infra/dev.compose.yml -f infra/build.compose.yml up --build",
+    "dev:test": "echo \" Not implemented yet! \"",
+    "dev:clean": "docker compose -f infra/dev.compose.yml -f infra/build.compose.yml down --volumes --remove-orphans",
+    "lint:setup": "rome start",
+    "lint:format": "rome format service tests libs --write --use-server",
+    "lint:check": "rome check service tests libs --use-server",
+    "lint:apply": "rome check service tests libs --apply-unsafe --use-server",
+    "lint:fix": "yarn lint:format && yarn lint:apply",
+    "test:lint": "rome ci svcs tests",
+    "test:tsc": "tsc --noEmit",
+    "test:unit": "echo \" Not implemented yet! \"",
+    "test:e2e": "echo \" Not implemented yet! \"",
+    "test:watch": "echo \" Not implemented yet! \"",
+    "test:prod": "echo \" Not implemented yet! \"",
+    "test:all": "echo \" Not implemented yet! \""
   },
   "workspaces": [
-    "dist",
-    "docs",
-    "infra",
+    "dist/*",
     "libs/*",
-    "pkgs/*",
-    "profiles/*",
     "providers/*",
-    "service",
-    "stores/*"
+    "routes/*",
+    "service"
   ],
   "devDependencies": {
-    "@libs/build": "workspace:^",
-    "@types/node": "^18.15.5",
-    "rome": "^11.0.0",
-    "tsx": "^3.12.6",
-    "typescript": "^5.0.2"
-  }
+    "@libs/build": "workspace:*",
+    "@types/node": "20.1.2",
+    "rome": "12.0.0",
+    "typescript": "5.0.4"
+  },
+  "type": "module",
+  "packageManager": "yarn@4.0.0-rc.43"
 }

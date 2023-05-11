@@ -1,5 +1,5 @@
 {
-  "name": "@libs/router",
+  "name": "@routes/provider",
   "main": "index.mts",
   "packageManager": "yarn@4.0.0-rc.43"
 }
