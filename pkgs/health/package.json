@@ -1,8 +1,0 @@
-{
-  "name": "@pkgs/health",
-  "main": "index.ts",
-  "packageManager": "yarn@4.0.0-rc.40",
-  "dependencies": {
-    "@modern/service": "workspace:^"
-  }
-}
