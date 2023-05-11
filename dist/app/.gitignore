@@ -14,3 +14,5 @@
 .pnp.*
 
 node_modules
+src
+!src/.keep
