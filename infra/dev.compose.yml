@@ -3,14 +3,14 @@ services:
 
   service:
     build:
-      dockerfile: ../service/dev.docker
-      context: ../dist/
+      dockerfile: ../../service/dev.docker
+      context: ../dist/app/
     init: true
     restart: always
     ports:
       - "8443:8443"
     volumes:
-      - ../dist/src:/home/node/app/src
+      - ../dist/app/src:/home/node/app/src
     command: "yarn nodemon src/index.mjs"
 
 

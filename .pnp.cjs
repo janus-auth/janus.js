@@ -14,8 +14,12 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
-      "name": "@janus/dist",\
-      "reference": "workspace:dist"\
+      "name": "@janus/app",\
+      "reference": "workspace:dist/app"\
+    },\
+    {\
+      "name": "@janus/tests",\
+      "reference": "workspace:dist/tests"\
     },\
     {\
       "name": "@libs/build",\
@@ -67,11 +71,12 @@ const RAW_RUNTIME_STATE =
     }\
   ],\
   "enableTopLevelFallback": true,\
-  "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)|(^(?:dist(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
+  "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)|(^(?:dist\\\\/app)$)",\
   "fallbackExclusionList": [\
-    ["@janus/dist", ["workspace:dist"]],\
+    ["@janus/app", ["workspace:dist/app"]],\
     ["@janus/janus.js", ["workspace:."]],\
     ["@janus/service", ["workspace:service"]],\
+    ["@janus/tests", ["workspace:dist/tests"]],\
     ["@libs/build", ["workspace:libs/build"]],\
     ["@libs/keychain", ["workspace:libs/keychain"]],\
     ["@libs/router", ["workspace:libs/router"]],\
@@ -330,11 +335,11 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@janus/dist", [\
-      ["workspace:dist", {\
-        "packageLocation": "./dist/",\
+    ["@janus/app", [\
+      ["workspace:dist/app", {\
+        "packageLocation": "./dist/app/",\
         "packageDependencies": [\
-          ["@janus/dist", "workspace:dist"],\
+          ["@janus/app", "workspace:dist/app"],\
           ["nodemon", "npm:2.0.22"]\
         ],\
         "linkType": "SOFT"\
@@ -362,6 +367,16 @@ const RAW_RUNTIME_STATE =
           ["@libs/router", "workspace:libs/router"],\
           ["@routes/hello", "workspace:routes/hello"],\
           ["@routes/system", "workspace:routes/system"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@janus/tests", [\
+      ["workspace:dist/tests", {\
+        "packageLocation": "./dist/tests/",\
+        "packageDependencies": [\
+          ["@janus/tests", "workspace:dist/tests"],\
+          ["nodemon", "npm:2.0.22"]\
         ],\
         "linkType": "SOFT"\
       }]\

@@ -1,5 +1,5 @@
 {
-  "name": "@janus/dist",
+  "name": "@janus/tests",
   "devDependencies": {
     "nodemon": "2.0.22"
   },

@@ -1,7 +1,7 @@
 import { keychainFactory } from './keychain.mjs'
+import { routerFactory } from '@libs/router'
 import { helloRoute } from '@routes/hello'
 import { canaryRouteFactory } from '@routes/system'
-import { routerFactory } from '@libs/router'
 
 const keychain = await keychainFactory()
 

@@ -14,41 +14,6 @@ var keychainFactory = async () => {
   };
 };
 
-// routes/hello/route.mts
-var helloRoute = {
-  method: "GET",
-  path: "/",
-  handler: async (stream, headers) => {
-    stream.respond({
-      "content-type": "text/html; charset=utf-8",
-      ":status": 200
-    });
-    stream.end("<h1>Hello World</h1>");
-  }
-};
-
-// routes/system/canary/canary.handler.mts
-var canaryHandlerFactory = (keychain2) => {
-  return async (stream, headers) => {
-    stream.respond({
-      "content-type": "application/json; charset=utf-8",
-      ":status": 200
-    });
-    console.log({ keychain: keychain2 });
-    stream.end("<h1>Canary</h1>");
-  };
-};
-
-// routes/system/canary/canary.route.mts
-var canaryRouteFactory = (keychain2) => {
-  const canaryHandler = canaryHandlerFactory(keychain2);
-  return {
-    method: "GET",
-    path: "/canary",
-    handler: canaryHandler
-  };
-};
-
 // libs/router/src/notFound.route.mts
 var notFoundRoute = {
   method: "GET",
@@ -72,6 +37,41 @@ var routerFactory = (routes2, notFoundRoute2 = notFoundRoute) => {
     const path = headers[":path"]?.split("?")[0] ?? "/";
     const route = routerMap.get(path) ?? notFoundRoute2;
     return await route.handler(stream, headers);
+  };
+};
+
+// routes/hello/route.mts
+var helloRoute = {
+  method: "GET",
+  path: "/",
+  handler: async (stream, headers) => {
+    stream.respond({
+      "content-type": "text/html; charset=utf-8",
+      ":status": 200
+    });
+    stream.end("<h1>Hello Worldz</h1>");
+  }
+};
+
+// routes/system/canary/canary.handler.mts
+var canaryHandlerFactory = (keychain2) => {
+  return async (stream, headers) => {
+    stream.respond({
+      "content-type": "application/json; charset=utf-8",
+      ":status": 200
+    });
+    console.log({ keychain: keychain2 });
+    stream.end("<h1>Canary</h1>");
+  };
+};
+
+// routes/system/canary/canary.route.mts
+var canaryRouteFactory = (keychain2) => {
+  const canaryHandler = canaryHandlerFactory(keychain2);
+  return {
+    method: "GET",
+    path: "/canary",
+    handler: canaryHandler
   };
 };
 

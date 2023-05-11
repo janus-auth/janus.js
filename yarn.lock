@@ -180,9 +180,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@janus/dist@workspace:dist":
+"@janus/app@workspace:dist/app":
   version: 0.0.0-use.local
-  resolution: "@janus/dist@workspace:dist"
+  resolution: "@janus/app@workspace:dist/app"
   dependencies:
     nodemon: "npm:2.0.22"
   languageName: unknown
@@ -207,6 +207,14 @@ __metadata:
     "@libs/router": "workspace:*"
     "@routes/hello": "workspace:*"
     "@routes/system": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@janus/tests@workspace:dist/tests":
+  version: 0.0.0-use.local
+  resolution: "@janus/tests@workspace:dist/tests"
+  dependencies:
+    nodemon: "npm:2.0.22"
   languageName: unknown
   linkType: soft
 

@@ -12,9 +12,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@janus/dist@workspace:.":
+"@janus/app@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@janus/dist@workspace:."
+  resolution: "@janus/app@workspace:."
   dependencies:
     nodemon: "npm:2.0.22"
   languageName: unknown

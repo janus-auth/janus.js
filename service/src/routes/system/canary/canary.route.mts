@@ -7,6 +7,6 @@ export const canaryRouteFactory = (keychain: Keychain): Route => {
   return {
     method: 'GET',
     path: '/canary',
-    handler: canaryHandler
+    handler: canaryHandler,
   }
 }

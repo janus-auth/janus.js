@@ -6,6 +6,6 @@ const external = []
 buildHelper({
     name: 'tests',
     patterns: ['tests/**/*.{test,e2e}.ts'],
-    outDir: 'tests',
+    outDir: 'tests/src',
     external,
 })
